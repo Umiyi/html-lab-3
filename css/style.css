@@ -1,0 +1,310 @@
+/* ============ RESET / BASE ============ */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: #0f0f0f;
+  color: #f1f1f1;
+}
+
+/* ============ HEADER ============ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  height: 56px;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  background: #0f0f0f;
+  border-bottom: 1px solid #222;
+}
+
+.header__left, .header__center, .header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__center {
+  flex: 1;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.logo__badge {
+  display: inline-flex;
+  width: 26px;
+  height: 18px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #ff0033;
+  color: #fff;
+  font-size: 12px;
+}
+
+.icon-btn {
+  border: 0;
+  background: #1f1f1f;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #2d5bff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+/* SEARCH */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: min(720px, 100%);
+}
+
+.search__input {
+  flex: 1;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid #2a2a2a;
+  background: #121212;
+  color: #fff;
+  outline: none;
+}
+
+.search__btn {
+  border: 0;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: #1f1f1f;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ============ PAGE LAYOUT (Flexbox) ============ */
+.page {
+  display: flex; /* головний flex контейнер */
+  min-height: calc(100vh - 56px);
+}
+
+/* ============ SIDEBAR ============ */
+.sidebar {
+  width: 240px;
+  padding: 12px;
+
+  background: #0f0f0f;
+  border-right: 1px solid #222;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar__block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar__title {
+  font-size: 12px;
+  opacity: 0.8;
+  margin: 8px 8px 4px;
+}
+
+.sidebar__item {
+  text-decoration: none;
+  color: #f1f1f1;
+  padding: 10px 10px;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.sidebar__item:hover { background: #1f1f1f; }
+.sidebar__item.active { background: #1f1f1f; font-weight: 700; }
+
+.sidebar__divider {
+  height: 1px;
+  background: #222;
+  margin: 4px 0;
+}
+
+/* ============ CONTENT ============ */
+.content {
+  flex: 1; /* займає весь залишок */
+  padding: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* CHIPS */
+.chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.chip {
+  border: 1px solid #2a2a2a;
+  background: #1f1f1f;
+  color: #fff;
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.chip--active {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+/* ============ VIDEOS GRID (Flexbox wrap) ============ */
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.video-card {
+  width: calc((100% - 32px) / 3); /* 3 колонки */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.video-card__thumb {
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  position: relative;
+}
+
+.thumb__hint {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.video-card__meta {
+  display: flex;
+  gap: 10px;
+}
+
+.video-card__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #3a3a3a;
+  flex: 0 0 auto;
+}
+
+.video-card__title {
+  font-size: 14px;
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+
+.video-card__sub {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* ============ SHORTS ============ */
+.shorts {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #222;
+}
+
+.shorts__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.shorts__title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.shorts__close {
+  border: 0;
+  background: transparent;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.shorts__row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.short-card {
+  width: 160px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.short-card__thumb {
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  background: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
+
+.short-card__title { font-weight: 700; }
+.short-card__sub { font-size: 12px; color: #aaa; }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1100px) {
+  .video-card { width: calc((100% - 16px) / 2); } /* 2 колонки */
+}
+
+@media (max-width: 760px) {
+  .sidebar { display: none; } /* мобільна версія без sidebar */
+  .video-card { width: 100%; } /* 1 колонка */
+}

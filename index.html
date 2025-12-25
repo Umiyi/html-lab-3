@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lab 3 — YouTube Layout (Flexbox)</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__left">
+      <button class="icon-btn" aria-label="Меню">☰</button>
+      <div class="logo">
+        <span class="logo__badge">▶</span>
+        <span class="logo__text">YouTube</span>
+      </div>
+    </div>
+
+    <div class="header__center">
+      <div class="search">
+        <input class="search__input" type="text" placeholder="Пошук" />
+        <button class="search__btn" aria-label="Пошук">🔍</button>
+        <button class="icon-btn" aria-label="Голосовий пошук">🎤</button>
+      </div>
+    </div>
+
+    <div class="header__right">
+      <button class="icon-btn" aria-label="Створити">➕</button>
+      <button class="icon-btn" aria-label="Сповіщення">🔔</button>
+      <div class="avatar" aria-label="Профіль">B</div>
+    </div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <div class="page">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="sidebar__block">
+        <a class="sidebar__item active" href="#">Головна</a>
+        <a class="sidebar__item" href="#">YouTube Shorts</a>
+        <a class="sidebar__item" href="#">Підписки</a>
+        <a class="sidebar__item" href="#">YouTube Music</a>
+      </nav>
+
+      <div class="sidebar__divider"></div>
+
+      <nav class="sidebar__block">
+        <div class="sidebar__title">Ви</div>
+        <a class="sidebar__item" href="#">Ваш канал</a>
+        <a class="sidebar__item" href="#">Історія</a>
+        <a class="sidebar__item" href="#">Ваші відео</a>
+        <a class="sidebar__item" href="#">Переглянути пізніше</a>
+        <a class="sidebar__item" href="#">Завантаження</a>
+        <a class="sidebar__item" href="#">Показати більше</a>
+      </nav>
+
+      <div class="sidebar__divider"></div>
+
+      <nav class="sidebar__block">
+        <div class="sidebar__title">Підписки</div>
+        <a class="sidebar__item" href="#">ROZETKA</a>
+        <a class="sidebar__item" href="#">TheDRZJ</a>
+        <a class="sidebar__item" href="#">Хащі</a>
+        <a class="sidebar__item" href="#">Капітан правда</a>
+        <a class="sidebar__item" href="#">Показати ще</a>
+      </nav>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+      <!-- CHIPS -->
+      <section class="chips" aria-label="Категорії">
+        <button class="chip chip--active">Усі</button>
+        <button class="chip">Ігри</button>
+        <button class="chip">Музика</button>
+        <button class="chip">Прямі трансляції</button>
+        <button class="chip">Новини</button>
+        <button class="chip">Програмування</button>
+        <button class="chip">Освіта</button>
+        <button class="chip">Мультфільми</button>
+        <button class="chip">Нещодавні</button>
+      </section>
+
+      <!-- VIDEOS GRID -->
+      <section class="videos" aria-label="Сітка відео">
+        <article class="video-card">
+          <div class="video-card__thumb"><span class="thumb__hint">16:9</span></div>
+          <div class="video-card__meta">
+            <div class="video-card__avatar"></div>
+            <div class="video-card__text">
+              <h3 class="video-card__title">Назва відео №1 — приклад</h3>
+              <div class="video-card__sub">Канал • 123 тис. переглядів • 2 дні тому</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-card__thumb"><span class="thumb__hint">16:9</span></div>
+          <div class="video-card__meta">
+            <div class="video-card__avatar"></div>
+            <div class="video-card__text">
+              <h3 class="video-card__title">Назва відео №2 — приклад</h3>
+              <div class="video-card__sub">Канал • 70 тис. переглядів • 1 тиждень тому</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-card__thumb"><span class="thumb__hint">16:9</span></div>
+          <div class="video-card__meta">
+            <div class="video-card__avatar"></div>
+            <div class="video-card__text">
+              <h3 class="video-card__title">Назва відео №3 — приклад</h3>
+              <div class="video-card__sub">Канал • 1,2 млн переглядів • 1 місяць тому</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-card__thumb"><span class="thumb__hint">16:9</span></div>
+          <div class="video-card__meta">
+            <div class="video-card__avatar"></div>
+            <div class="video-card__text">
+              <h3 class="video-card__title">Назва відео №4 — приклад</h3>
+              <div class="video-card__sub">Канал • 8 тис. переглядів • 5 годин тому</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-card__thumb"><span class="thumb__hint">16:9</span></div>
+          <div class="video-card__meta">
+            <div class="video-card__avatar"></div>
+            <div class="video-card__text">
+              <h3 class="video-card__title">Назва відео №5 — приклад</h3>
+              <div class="video-card__sub">Канал • 54 тис. переглядів • 3 дні тому</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="video-card">
+          <div class="video-card__thumb"><span class="thumb__hint">16:9</span></div>
+          <div class="video-card__meta">
+            <div class="video-card__avatar"></div>
+            <div class="video-card__text">
+              <h3 class="video-card__title">Назва відео №6 — приклад</h3>
+              <div class="video-card__sub">Канал • 230 тис. переглядів • 2 тижні тому</div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- SHORTS -->
+      <section class="shorts" aria-label="Shorts">
+        <div class="shorts__header">
+          <h2 class="shorts__title">YouTube Shorts</h2>
+          <button class="shorts__close" aria-label="Закрити">✕</button>
+        </div>
+
+        <div class="shorts__row">
+          <div class="short-card">
+            <div class="short-card__thumb"><span class="thumb__hint">9:16</span></div>
+            <div class="short-card__text">
+              <div class="short-card__title">Short #1</div>
+              <div class="short-card__sub">1,2 млн переглядів</div>
+            </div>
+          </div>
+
+          <div class="short-card">
+            <div class="short-card__thumb"><span class="thumb__hint">9:16</span></div>
+            <div class="short-card__text">
+              <div class="short-card__title">Short #2</div>
+              <div class="short-card__sub">540 тис. переглядів</div>
+            </div>
+          </div>
+
+          <div class="short-card">
+            <div class="short-card__thumb"><span class="thumb__hint">9:16</span></div>
+            <div class="short-card__text">
+              <div class="short-card__title">Short #3</div>
+              <div class="short-card__sub">89 тис. переглядів</div>
+            </div>
+          </div>
+
+          <div class="short-card">
+            <div class="short-card__thumb"><span class="thumb__hint">9:16</span></div>
+            <div class="short-card__text">
+              <div class="short-card__title">Short #4</div>
+              <div class="short-card__sub">2,1 млн переглядів</div>
+            </div>
+          </div>
+
+          <div class="short-card">
+            <div class="short-card__thumb"><span class="thumb__hint">9:16</span></div>
+            <div class="short-card__text">
+              <div class="short-card__title">Short #5</div>
+              <div class="short-card__sub">310 тис. переглядів</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
