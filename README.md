@@ -1,2 +1,2 @@
-# html-lab-2
+# html-lab-3
 Vladysalv Demianets KID-42
